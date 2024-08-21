@@ -143,7 +143,7 @@ Test de arquitectura hexagonal con NextJs 14
           <option value="STUDENT_PRO">Student pro</option>
       </select>
   </div>
-  <button type="submit">Save type</button>
+  <button>Save type</button>
 ```
 
     💡🧠⏫ Recomendamos crear un componente separado para manejar mejor la funcionalidad.
