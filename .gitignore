@@ -38,3 +38,7 @@ next-env.d.ts
 # velite files
 
 .velite
+
+
+# test multiples next&react versions
+.gitattributes
