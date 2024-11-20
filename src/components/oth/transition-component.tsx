@@ -19,6 +19,7 @@ export function MotionTransition(props: MotionTransitionProps) {
             animate="visible"
             exit="hidden"
             className={className}
+            {...(motion.div as any)}
         >
             {children}
         </motion.div>
