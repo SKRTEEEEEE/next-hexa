@@ -1,4 +1,5 @@
 
+import type { JSX } from "react";
 // Other tech data 
 export type TechLenguajeItem = {
     title: string;

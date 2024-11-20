@@ -121,6 +121,13 @@ npm i react-countup
 - [x] Pasar techs functionalities to clean arch
 ### Crear parte "about me" de markdowns
 - [x] Mirar si se puede hacer con md en vez de mdx
+### Migrar a NextJs 15
+- [Información](https://nextjs.org/blog/next-15)
+- 💡 Optamos por el comando de codemods: `npx @next/codemod@canary upgrade latest`
+- [ ] Ejecutar el comando de migración y esperar que nada pete 🫠
+```
+
+```
 ## 1x. Reestructurar clean arch v3 p2 (back)
 ### Manejar correctamente los UC, C y acciones
 - [ ] Utilizar e unificar un mensaje de respuesta correctamente
@@ -150,6 +157,10 @@ npm i react-countup
 
 
 ## 1x. Frontend
+### next-themes
+- [ ] Cuando se modifique next-themes: **hay que fijar-se/solucionar en el error de re-hidratación**
+
+    Este ocurre cuando entramos directamente a **cualquier ruta**, excepto [la principal / root](http://localhost:3000)
 - [ ] Mejorar el frontend, mejorando los temas, y comprobando la correcta utilización de tailwind en todos los componentes
 - [ ] Traducir todo a Español
 #### Tech table

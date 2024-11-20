@@ -61,7 +61,7 @@ TOptions extends Partial<Record<keyof TBase & MongooseBase, (value: any) => any>
     // Asumiendo que tienes un método read en MongooseBaseRepository o necesitas implementarlo
     return this.readRepo.read(filter, projection, options);
   }
-  async delete(filter?: FilterQuery<any> | null | undefined, options?: QueryOptions<any> | null | undefined): Query<any, any, {}, any, "findOneAndDelete", {}>{
+  async delete(filter?: FilterQuery<any> | null | undefined, options?: QueryOptions<any> | null | undefined): Promise<Query<any, any, {}, any, "findOneAndDelete", {}>>{
     return this.deleteRepo.delete(filter, options)
   }
   async update(filter?: FilterQuery<TBase & MongooseBase> | undefined, update?: UpdateQuery<TBase> | undefined, options?: QueryOptions<TBase> | null | undefined): Promise<TBase & MongooseBase | null>{

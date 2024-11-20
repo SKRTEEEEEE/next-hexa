@@ -15,7 +15,7 @@ TBase,
 export class MongooseDeleteRepository<
 TBase,
 > extends MongooseBaseRepository<TBase> implements MongooseDeleteI{
-  async delete(filter?: FilterQuery<any> | null | undefined, options?: QueryOptions<any> | null | undefined): Query<any, any, {}, any, "findOneAndDelete", {}> {
+  async delete(filter?: FilterQuery<any> | null | undefined, options?: QueryOptions<any> | null | undefined): Promise<Query<any, any, {}, any, "findOneAndDelete", {}>> {
     await this.connect();
     return await this.Model.findOneAndDelete(filter, options)
   }

@@ -6,13 +6,13 @@
 import { revalidatePath } from "next/cache"
 import { redirect } from "next/navigation"
 
-export const rv = (path:string) => {
+export const rv = async (path:string) => {
     revalidatePath(path)
 }
-export const rd = (path:string) => {
+export const rd = async (path:string) => {
     redirect(path)
 }
-export const rvrd = (path:string)=> {
+export const rvrd = async (path:string)=> {
     revalidatePath(path)
     redirect(path)
 }

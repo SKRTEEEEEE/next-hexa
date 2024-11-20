@@ -3,7 +3,7 @@
 # Profile Page Clean Arch
 
 <div align="center">
-  <img src="./docs/profile-page.gif"
+  <img src="./docs/img/profile-page.gif"
        alt="banner" style="width: 100%"/>
 </div>
 

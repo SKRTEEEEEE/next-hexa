@@ -23,7 +23,7 @@ export type MongooseDeleteI = {
   delete(
     filter?: Partial<TBase & MongooseBase> | null | undefined, 
     options?: any | null | undefined
-  ): Query<any, any, {}, any, "findOneAndDelete", {}>
+  ): Promise<Query<any, any, {}, any, "findOneAndDelete", {}>>
 }
 export type MongooseDeleteByIdI = {
   deleteById(
@@ -37,7 +37,7 @@ export type MongooseReadI<TBase> = {
     projection?: ProjectionType<any> | null | undefined,
     options?: QueryOptions<any> | null | undefined
   )
-    : Promise<(TBase & MongooseBase)[] | null>
+    : Query<(TBase & MongooseBase)[] | null>
 }
 export type MongooseUpdateI<TBase> = {
   update(

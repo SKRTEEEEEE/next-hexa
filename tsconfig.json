@@ -28,7 +28,8 @@
       "#site/content": [
         "./.velite"
       ]
-    }
+    },
+    "target": "ES2017"
   },
   // Despues de migrar mirar que pasa
   // "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

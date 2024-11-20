@@ -10,7 +10,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "../ui/form";
 import { Input } from "../ui/input";
 import { User, userSchema } from "@/core/domain/entities/User";
-import { useEffect, useState } from "react";
+import { useEffect, useState, type JSX } from "react";
 import Image from "next/image";
 import { Label } from "../ui/label";
 import { updateImg, uploadImg } from "@/actions/img";

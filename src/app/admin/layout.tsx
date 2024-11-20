@@ -71,7 +71,8 @@ export default function MainLayout({
         <ThirdwebProvider>
           <SiteHeader dataSiteConfig={dataSiteConfig}/>
           {children}
-          </ThirdwebProvider></CThemeProvider>
+          </ThirdwebProvider>
+          </CThemeProvider>
           </div>
   );
 }

@@ -3,7 +3,7 @@ import { MongooseBaseRepository } from "./base.repository";
 import { ProjectionType } from "mongoose";
 import { QueryOptions } from "mongoose";
 import { Query } from "mongoose";
-import { MongooseBase, MongooseDocument } from "../types";
+import { MongooseBase } from "../types";
 import { MongooseReadI } from "../types/implementations";
 
 export class MongooseReadRepository<
@@ -14,7 +14,7 @@ TBase,
       filter?: FilterQuery<TBase & MongooseBase>,
       projection?: ProjectionType<any> | null,
       options?: QueryOptions<any> | null
-    ): Query<(TBase & MongooseBase)[], any, {}, any, "find", {}> {
+    ): Promise<Query<(TBase & MongooseBase)[], any, {}, any, "find", {}>> {
       try {
         await this.connect();
         const docs = await this.Model.find(filter || {}, projection, options) // Usa un objeto vacío si filter es undefined

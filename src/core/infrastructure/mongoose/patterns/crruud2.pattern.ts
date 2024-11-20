@@ -59,7 +59,7 @@ export abstract class MongooseCRRUUD2Pattern<
   async delete(
     filter?: Partial<TBase & MongooseBase> | null | undefined,
     options?: any | null | undefined
-  ): Query<any, any, {}, any, "findOneAndDelete", {}> {
+  ): Promise<Query<any, any, {}, any, "findOneAndDelete", {}>> {
     return this.deleteRepo.delete(filter, options)
   }
 }
