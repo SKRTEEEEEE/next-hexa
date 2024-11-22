@@ -35,7 +35,7 @@ type AdminTechTableProps = {
     admins: any[];
   }
 const renderButtonNew = 
-<Button className="w-full sm:w-auto gap-2">
+<Button className="gap-2">
 <Plus className="h-4 w-4" />
 Añadir nueva tecnología
 </Button>
@@ -43,7 +43,7 @@ Añadir nueva tecnología
 export default function AdminTechTable({ lenguajes, isAdmin, dispo, admins }: AdminTechTableProps) {
   const {dispoLeng, dispoFw} = dispo
   const [page, setPage] = useState(1)
-  const rowsPerPage = 3
+  const rowsPerPage = 10
   const totalPages = Math.ceil(lenguajes.length / rowsPerPage)
   const [error, setError] = useState<string | null>(null);
 
@@ -52,12 +52,12 @@ export default function AdminTechTable({ lenguajes, isAdmin, dispo, admins }: Ad
   
   return (
     <div className="w-full max-w-4xl mx-auto space-y-4 p-4">
-      <div className="flex flex-col sm:flex-row justify-between items-center gap-4 sticky top-0 bg-background z-10 py-4">
+      <div className="flex flex-col sm:flex-row justify-between items-center gap-4 sticky top-10 bg-none z-10 py-4">
         <TechDialog dispoLeng={dispoLeng} dispoFw={dispoFw} renderButton={renderButtonNew} admins={admins}/>
       </div>
 
       {/* Desktop view */}
-      <div className="rounded-md border bg-card hidden sm:block">
+      <div className="rounded-md border z-0 bg-card hidden sm:block">
         <Table>
           <TableHeader>
             <TableRow>
@@ -135,17 +135,23 @@ export default function AdminTechTable({ lenguajes, isAdmin, dispo, admins }: Ad
       </div>
 
       {/* Mobile view ⚠️⬇️ FALTA TERMINAR ⬇️⚠️ */}
-      <div className="space-y-4 sm:hidden">
+      <div className="z-0 space-y-2 sm:hidden">
         {paginatedData.map((tech) => (
           <Card key={tech.name}>
-            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2 pt-2">
               <CardTitle className="text-sm font-medium">
                 <div className="flex items-center space-x-3">
                   <Avatar>
                     <AvatarImage src={tech.img?tech.img:""} alt={tech.name} />
                     <AvatarFallback>{tech.name.substring(0, 2).toUpperCase()}</AvatarFallback>
                   </Avatar>
-                  <span>{tech.name}</span>
+                  <Badge 
+                    style={{ 
+                      backgroundColor: `${tech.color}`,
+                      color: parseInt(tech.color.split("#")[0], 16) > 0xffffff / 2 ? '#000' : '#fff'
+                    }}
+                    className="ml-2 text-xl px-4"
+                  >{tech.name}</Badge>
                 </div>
               </CardTitle>
               <div className="flex space-x-2">
@@ -158,22 +164,11 @@ export default function AdminTechTable({ lenguajes, isAdmin, dispo, admins }: Ad
                 <DeleteTechButton isAdmin={isAdmin} name={tech.name} onError={(error) => setError(error)}/>
               </div>
             </CardHeader>
-            <CardContent>
-              <div className="text-sm">
-                <p>Afinidad: {tech.afinidad}</p>
-                <p>Experiencia: {tech.experiencia}</p>
-                <div className="inline">
-                  Color: 
-                  <Badge 
-                    style={{ 
-                      backgroundColor: `#${tech.color}`,
-                      color: parseInt(tech.color, 16) > 0xffffff / 2 ? '#000' : '#fff'
-                    }}
-                    className="ml-2"
-                  >
-                    {tech.color}
-                  </Badge>
-                </div>
+            <CardContent className="pb-2">
+              <div className="text-sm flex gap-2">
+               
+                <p><span className="text-xs "> Afinidad: </span>{tech.afinidad}</p>
+                <p><span className="text-xs"> Experiencia: </span>{tech.experiencia}</p>
               </div>
             </CardContent>
           </Card>

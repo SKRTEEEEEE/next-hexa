@@ -34,7 +34,7 @@ export function EjercicioItem({slug, title, description, date,tags}: PostItemPro
                     <time dateTime={date}>{formatDate(date)}</time>
                 </dd>
             </dl>
-        <Link href={"academia"+slug} className={cn(buttonVariants({variant: "link"}),"py-0")}>
+        <Link href={"/academia/"+slug} className={cn(buttonVariants({variant: "link"}),"py-0")}>
             Read more ➡️
         </Link>
         </div>

@@ -29,12 +29,13 @@ const TechsAdminPage = async( ) =>{
 
  
     return (
-        
-        <section className="h-dvh flex flex-col justify-center items-center">
+        <>
+        <section className=" my-auto h-full flex flex-col justify-center items-center">
             
         {/* <AdminTechTable lenguajes={allLeng} session={session}/> */}
         <AdminTechTable lenguajes={allLeng} isAdmin={isAdmin} dispo={{dispoLeng,dispoFw}} admins={cleanAdmins||[]}/>
         </section>
+        </>
         
     )
 }

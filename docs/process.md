@@ -60,8 +60,7 @@
 ## 12. Reestructuración y importar web antigua (full) [merge-old]
 ### Importar web "antigua/actual"
 - [x] Agrupar componentes en carpetas
-#### Dependencias
-- [`tsparticles`](https://github.com/tsparticles/react/#readme)
+<details><summary><h4>Dependencias</h4></summary>
 
 ```bash
 npm i @tsparticles/react @tsparticles/slim
@@ -103,6 +102,8 @@ npm i @octokit/rest
 ```bash
 npm i react-countup
 ```
+</details>
+
 #### Eliminar NextUi
 - [x] Terminar de eliminar NextUI y desinstalar-lo
 #### Techs form
@@ -114,7 +115,6 @@ npm i react-countup
     - [x] Mejorar color y prefe (poner cuadrado input mas peque y al lado del title)
     - [x] Mejorar expe y afinidad (poner input mas peque al lado del title y al lado el total escojido)
 
-##### **ACTUALIDAD**
 
 ## 13. Reestructurar clean arch v3 p1 (back) 
 ### Pasar backend techs a clean
@@ -124,27 +124,49 @@ npm i react-countup
 ### Migrar a NextJs 15
 - [Información](https://nextjs.org/blog/next-15)
 - 💡 Optamos por el comando de codemods: `npx @next/codemod@canary upgrade latest`
-- [ ] Ejecutar el comando de migración y esperar que nada pete 🫠
-```
+- [x] Ejecutar el comando de migración y esperar que nada pete 🫠
+- [x] Solucionar el error de re-hidratación de next-themes: esta en [theme-provider switch component](../src/components/oth/theme-provider.tsx) probablemente 🧎‍♂️‍➡️💨
+- [x] Solucionar el error de re-hidratación de third-web 
+##### **ACTUALIDAD**
 
-```
+
+## 1x. Frontend
+### next-themes
+- [x] Cuando se modifique next-themes: 
+    - [x] **Hay que fijar-se/solucionar en el error de re-hidratación**
+
+        Este ocurre cuando entramos directamente a **cualquier ruta**, excepto [la principal / root](http://localhost:3000)
+- [x] Mejorar el frontend, mejorando los temas, y comprobando la correcta utilización de tailwind en todos los componentes **p1**
+- [ ] Traducir todo a Español
+- [ ] Unificar lógica del main(grid-layout)
+    - [x] mínimo: Las partes que utilizan el `site-header` component
+### Oth
+#### Tech table
+- [x] Terminar parte mobile
+#### Tech dialog
+- [ ] Tratar de encontrar el causante del problema del id
+- [ ] Responder acciones del servidor con `toast()`
+### EXTRA(dep)
+- [ ] Tratar de automatizar mínimamente la gestión de las dos versiones, tanto de Nextjs como React - o a falta de, documentar proceso.  
+## 1x. Internalization (en/es/de) `i18n`
 ## 1x. Reestructurar clean arch v3 p2 (back)
+### Revisar connectors
+- [ ] Mirar que hacer con las **funciones de los connectors que se utilizan en el Framework**, como client de thirdweb o ourFileRouter de uploadthing que creo que ni se utiliza.
+#### Traspasar octokit a clean arch
 ### Manejar correctamente los UC, C y acciones
 - [ ] Utilizar e unificar un mensaje de respuesta correctamente
 - [ ] **Acción de DAR ADMIN** es un muy buen ejemplo de aver que pasa
-- [ ] Utilizar toast para manejar los estados
-    - [ ] En el caso de que el usuario configure un perfil se le ha de mostrar toast
-    - [ ] Si el usuario configura el correo mostrar otro toast conforme se le ha enviado o ha habido error
-- [ ] Manejar correctamente los estados de todos los componentes
-- [ ] Manejar correctamente los redirect y revalidate(en revalidate cuando sea necesario revalidate la pagina actual, que sea dinámico según la pagina en la que esta)
 - [ ] Documentar lógica UC y C: _Los uc serán los individuales y los C los compound_
 #### Utilizar un mensaje de respuesta unificado
 - [ ] Responder a las acciones del servidor con `toast`
     - [ ] Aplicar toast en el tech-form (tech-dialog)
+- [ ] Utilizar toast para manejar los estados
+    - [ ] En el caso de que el usuario configure un perfil se le ha de mostrar toast
+    - [ ] Si el usuario configura el correo mostrar otro toast conforme se le ha enviado o ha habido error
+    - [ ] En el caso de cerrar session
+- [ ] Manejar correctamente los estados de todos los componentes
+- [ ] Manejar correctamente los redirect y revalidate(en revalidate cuando sea necesario revalidate la pagina actual, que sea dinámico según la pagina en la que esta)
 #### Mejorar errores correctamente
-### Revisar connectors
-- [ ] Mirar que hacer con las **funciones de los connectors que se utilizan en el Framework**, como client de thirdweb o ourFileRouter de uploadthing que creo que ni se utiliza.
-#### Traspasar ocktokit a clean arch
 
 
 ### Regresar a la web al poner tarjeta
@@ -153,18 +175,8 @@ npm i react-countup
 
 
 ### Despliegue
-- [ ] Hay que cambiar el ATLAS env secret para que apunte a la nueva colección, en el despliegue de next-hexa-test, para que funcione con los datos de profile-page(actual), igual que en el local.
+- [x] Hay que cambiar el ATLAS env secret para que apunte a la nueva colección, en el despliegue de next-hexa-test, para que funcione con los datos de profile-page(actual), igual que en el local.
 
-
-## 1x. Frontend
-### next-themes
-- [ ] Cuando se modifique next-themes: **hay que fijar-se/solucionar en el error de re-hidratación**
-
-    Este ocurre cuando entramos directamente a **cualquier ruta**, excepto [la principal / root](http://localhost:3000)
-- [ ] Mejorar el frontend, mejorando los temas, y comprobando la correcta utilización de tailwind en todos los componentes
-- [ ] Traducir todo a Español
-#### Tech table
-- [ ] Terminar parte mobile
 
 ## 1x. Comprobar uso stripe en despliegue (back)
 

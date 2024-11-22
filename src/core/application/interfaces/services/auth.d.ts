@@ -57,9 +57,10 @@ type VerifyJWTReturnType = Awaited<ReturnType<VerifyJWTType>>;
 // export type JWTPayload = ValidJWTReturnType['parsedJWT'];
 
 type JWTContext = {
-    role: RoleType | undefined;
+    role: RoleType | null;
     nick: string | undefined;
     id: string;
+    img: string | undefined;
 
   }
 interface ExtendedJWTPayload extends JWTPayload{

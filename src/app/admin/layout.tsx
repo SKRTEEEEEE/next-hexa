@@ -67,7 +67,7 @@ export default function MainLayout({
 }>) {
   return (
     <div className="relative flex min-h-dvh flex-col bg-background">
-      <CThemeProvider disableTransitionOnChange defaultTheme="dark-soft">
+      <CThemeProvider defaultTheme="light-soft" disableTransitionOnChange>
         <ThirdwebProvider>
           <SiteHeader dataSiteConfig={dataSiteConfig}/>
           {children}

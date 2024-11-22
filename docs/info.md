@@ -65,3 +65,12 @@
 
     **OJO:**
     - Esto es lo mismo que el tier1. Hay que evitar duplicidades!!
+
+## Paletas
+### v1
+#### Lógica/rulez
+- **primary ha de ser igual**
+- secondary tratar de ser igual
+- hay que jugar con el secondary-foreground y que contraste con secondary
+#### Tips
+- usar distintos fondos

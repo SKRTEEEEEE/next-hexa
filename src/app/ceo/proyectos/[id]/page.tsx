@@ -83,7 +83,7 @@ export default function ProjectsDynPage({ params }: { params: { id: number } }) 
       </section>
       {/* <Link href="/projects" className="px-8 mt-8 py-2 border-primary-ceo-200/80 hover:bg-primary-ceo-500/20 hover:border-primary-ceo-300 border-4 rounded-md bg-primary-ceo-700 ">Volver a la página de proyectos</Link> */}
       <div className='flex justify-evenly w-dvw md:w-10/12'> 
-            <Link className='px-2 py-1 border-2 border-primary-ceo-200 rounded-md bg-secondary-ceo-400/30 hover:bg-secondary-ceo-600 hover:border-primary-ceo-400/80' href={`/projects`}>⬅️Volver <span className="hidden lg:inline mr-4">a proyectos</span></Link>
+            <Link className='px-2 py-1 border-2 border-primary-ceo-200 rounded-md bg-secondary-ceo-400/30 hover:bg-secondary-ceo-600 hover:border-primary-ceo-400/80' href={`/ceo/proyectos`}>⬅️Volver <span className="hidden lg:inline mr-4">a proyectos</span></Link>
             {project?.urlGithub&&<Link className='px-2 py-1 border-2 border-primary-ceo-200 rounded-md bg-secondary-ceo-300/50 hover:bg-secondary-ceo-600 hover:border-primary-ceo-400/80' href={project.urlGithub} target='_blank'><span className="hidden xl:inline">Ver </span>Código📄</Link>} 
             {project?.urlDemo&&<Link className='px-2 py-1 border-2 border-primary-ceo-200 rounded-md bg-secondary-ceo-300/50 hover:bg-secondary-ceo-600 hover:border-primary-ceo-400/80' href={project.urlDemo} target='_blank'>Ir <span className="hidden xl:inline">al proyecto</span>🧑‍💻</Link>}
             

@@ -3,6 +3,7 @@ import { EjercicioItem } from "@/components/academia/ejercicio-item";
 import { SubscriptionPlansDialog } from "@/components/oth/plains-dialog/subscription-plans-dialog";
 import { buttonVariants } from "@/components/ui/button";
 import { routesConfig } from "@/config/routes";
+import { getCookiesUC } from "@/core/application/usecases/services/auth";
 import { userInCookiesUC } from "@/core/interface-adapters/controllers/user";
 import { cn, sortPosts } from "@/lib/utils";
 import { Metadata } from "next";
@@ -14,6 +15,8 @@ export const metadata: Metadata = {
 export default async function AprenderPage() {
   const latestPosts = sortPosts(ejercicios).slice(0,5)
   const user = await userInCookiesUC()
+  const session = await getCookiesUC()
+  console.log("session in academia page: ", {session})
 
   return (
     <>

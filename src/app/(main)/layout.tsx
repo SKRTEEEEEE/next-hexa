@@ -28,7 +28,7 @@ const dataSiteConfig = {
   paths: [
       {
           id: "ejercicios",
-          path: "./academia/ejercicios",
+          path: "/academia/ejercicios",
           title: "Ejercicios"
       }
   ],
@@ -65,7 +65,7 @@ export default function MainLayout({
 }>) {
   return (
     <div className="relative flex min-h-dvh flex-col bg-background">
-      <CThemeProvider disableTransitionOnChange defaultTheme="dark-soft">
+      <CThemeProvider defaultTheme="dark-soft" disableTransitionOnChange>
         <ThirdwebProvider>
           <SiteHeader dataSiteConfig={dataSiteConfig}/>
           {children}

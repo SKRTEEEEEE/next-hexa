@@ -54,7 +54,7 @@ export const updateUserFormC = async(payload: VerifyLoginPayloadParams,user:{id:
     }
     const res = await updateUserByIdUC(user.id, {...user, verifyToken, verifyTokenExpire, isVerified})
     if(!res) throw new DatabaseOperationError("update user form")
-    return await setJwtUC(payload,{nick:user.nick,id: user.id, role: userB.role || undefined})
+    return await setJwtUC(payload,{nick:user.nick,id: user.id, role: userB.role, img: user.img || undefined})
 }
 export const resendVerificationEmailC = async({id,email}:{id:string, email: string}) => {
     const {hashedToken, expireDate} = tokenGenerator()
@@ -234,9 +234,10 @@ export const loginUserUC = async (payload: VerifyLoginPayloadParams) => {
   const jwt = await setJwtUC(
     payload,
     {
-      role: user.role || undefined,
+      role: user.role,
       nick: user.nick,
-      id: user.id
+      id: user.id,
+      img: user.img || undefined
     }
   );
   return jwt

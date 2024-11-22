@@ -7,6 +7,7 @@ import { createWallet, inAppWallet } from "thirdweb/wallets";
 import { Button } from "../ui/button";
 import { Wallet } from "lucide-react";
 import { ThirdwebClientConfig } from "@/core/infrastructure/connectors/thirdweb-auth";
+import { useState } from "react";
 const wallets = [
     inAppWallet({
       auth: {
@@ -78,11 +79,13 @@ const client = getClient.client
 
 
 export const CConectButton =  ({connectButtonLabel="Iniciar session"}:{connectButtonLabel?:string}) =>{
+    const [img, setImg] = useState<string|undefined>(undefined)
     return(
+      <div suppressHydrationWarning>
         <ConnectButton
         
-        theme={darkTheme({
-        })}
+        // theme={darkTheme({
+        // })}
         client={client}
         wallets={wallets}
         connectModal={{
@@ -91,7 +94,11 @@ export const CConectButton =  ({connectButtonLabel="Iniciar session"}:{connectBu
           }}
         locale={"es_ES"}
         detailsModal={{
-            footer: () => <p>SKRT👾</p>,
+            footer: () => <div className="w-full text-2xl"><p>SKRT👾</p></div>
+            ,
+            hideSwitchWallet: true,
+            hideDisconnect: false,
+            connectedAccountAvatarUrl: img
         }}
         // El style parece que si modifica el connectButton w y height
         connectButton={{ label: connectButtonLabel, style:{
@@ -114,15 +121,14 @@ export const CConectButton =  ({connectButtonLabel="Iniciar session"}:{connectBu
             },
             doLogin: async (params) => {
                 console.log("loggin in!")
-                await login(params)
+                const jwt = await login(params)
+                setImg(jwt.ctx.img)
                 rd("/academia")
             },
             getLoginPayload: async ({address}) => generatePayload({address}),
-            doLogout: async () => {
-                console.log("logging out!")
-                await logout()
-                rd("/academia")
-            }
-        }}/>
+            doLogout:async () => {
+              await fetch('/api/logout', { method: 'GET' });
+          }
+        }}/></div>
     )
 }

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
+import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "../ui/sheet";
 import { Button } from "../ui/button";
 import { Menu } from "lucide-react";
 import Link, { LinkProps } from "next/link";
@@ -11,6 +11,7 @@ import { CConectButton } from "../oth/custom-connect-button";
 import { User } from "@/core/domain/entities/User";
 import UserFormDialog from "../site-header/user-form-dialog";
 import { DataSiteConfig } from "@/lib/types";
+import { Separator } from "../ui/separator";
 
 export function MobileNav({ user, dataSiteConfig }: { user: User | false | null, dataSiteConfig: DataSiteConfig }) {
   const [open, setOpen] = useState(false);
@@ -18,20 +19,20 @@ export function MobileNav({ user, dataSiteConfig }: { user: User | false | null,
   return (
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild>
-        <Button variant="outline" className="w-10 px-0 sm:hidden">
+        <Button variant="outline" className="w-10 px-0 md:hidden">
           <Menu className="h-5 w-5" />
           <span className="sr-only">Escoger tema</span>
         </Button>
       </SheetTrigger>
       <SheetContent side="right">
-        <MobileLink
-          onOpenChange={setOpen}
-          href={dataSiteConfig.logo.path}
-          className="flex items-center"
-        >
-          {/* Logo mas nombre "render" */}
-            {dataSiteConfig.logo.render}
-        </MobileLink>
+        <SheetTitle><Link className="font-bold flex items-center text-xl gap-4" onClick={()=>{
+          setOpen(false)
+        }} href={dataSiteConfig.logo.path}>
+          {dataSiteConfig.logo.render}
+        </Link>
+        <Separator className="mt-2"/>
+        </SheetTitle>
+     
         
         <div className="flex flex-col gap-3 mt-3">
           {/* "Paginas " */}

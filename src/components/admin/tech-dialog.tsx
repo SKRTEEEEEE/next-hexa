@@ -216,7 +216,7 @@ export function TechDialog({ dispoLeng, dispoFw, renderButton, tech, admins }: T
                       <>
                     {previewImage && (
                         <>
-                          <Image src={previewImage} id="picture" alt="Logo de tecnología" width={60} height={60} className="rounded-xl" />
+                          <Image src={previewImage} alt="Logo de tecnología" width={60} height={60} className="rounded-xl" />
                               <Button variant={"secondary"} className="my-auto" onClick={() => {
                                   setPreviewImage(null);
                                   setSelectedFile(null);
@@ -228,7 +228,7 @@ export function TechDialog({ dispoLeng, dispoFw, renderButton, tech, admins }: T
                       {!previewImage && (
 
 
-                        <Input id="picture" type="file" placeholder="Click para cargar una imagen" onChange={handleFileChange} />
+                        <Input  type="file" placeholder="Click para cargar una imagen" onChange={handleFileChange} />
 
                       )} 
                       </>
