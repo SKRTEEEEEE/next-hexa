@@ -20,6 +20,8 @@ export async function generateMetadata({params}: TagPageProps): Promise<Metadata
     }
 }
 
+
+// THIS DOESN'T WORKS!
 // export const generateStaticParams = () =>{
 //     const tags = getAllTags(ejercicios);
 //     const paths = Object.keys(tags).map(tag=> ({tag:slug(tag)}))
