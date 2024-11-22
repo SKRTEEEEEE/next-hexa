@@ -16,15 +16,16 @@ export async function generateMetadata({params}: TagPageProps): Promise<Metadata
     const {tema}= params;
     return {
         title: tema,
-        description: `Ejercicios con de ${tema}`
+        description: `Ejercicios de ${tema}`
     }
 }
 
-export const generateStaticParams = () =>{
-    const tags = getAllTags(ejercicios);
-    const paths = Object.keys(tags).map(tag=> ({tag:slug(tag)}))
-    return paths
-}
+// export const generateStaticParams = () =>{
+//     const tags = getAllTags(ejercicios);
+//     const paths = Object.keys(tags).map(tag=> ({tag:slug(tag)}))
+//     console.log("paths: ", paths)
+//     return paths
+// }
 
 export default function TemaPage({params}: TagPageProps){
     const {tema} = params;
