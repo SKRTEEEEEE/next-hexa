@@ -1,0 +1,14 @@
+{
+    "common": {
+        "previous": "Previous",
+        "next": "Next"
+    },
+    "root": {
+       "h1": "You are on the root page",
+       "links": {
+           "admin": "Go to admin",
+           "academia": "Go to academy",
+           "ceo": "Go to about me"
+       }
+   }
+}

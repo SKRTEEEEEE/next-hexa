@@ -1,0 +1,15 @@
+{
+
+    "common": {
+      "previous": "Zurück",
+      "next": "Weiter"
+    },
+    "root": {
+        "h1": "Du bist auf der Startseite",
+        "links": {
+            "admin": "Gehe zu Admin",
+            "academia": "Gehe zur Akademie",
+            "ceo": "Gehe zu Über mich"
+        }
+    }
+  }

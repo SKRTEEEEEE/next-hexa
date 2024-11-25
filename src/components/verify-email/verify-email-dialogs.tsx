@@ -19,7 +19,7 @@ export function VerifyEmailConfirmDialog() {
   const handleContinue = () => {
     try {
         setLoading(true)
-        rd("/academia")
+        rd("/")
         
     } catch (error) {
         console.error("error at redirect")
@@ -49,7 +49,7 @@ export function VerifyEmailConfirmDialog() {
 }
 export function RenderAlert({title,description}:{title: string, description: string}) {
     function navigate(){
-      rd("/academia")
+      rd("/")
     }
     return (
       <AlertDialog open={true}>

@@ -3,21 +3,20 @@
 import { Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Link from 'next/link';
+import { Web3I18, Web3Stat } from '@/lib/web3';
 
-type Project = {
-    id: number;
-    name: string;
-    description: string;
-    path: string;
-    contractUrl: string;
-    usos: string[];
-}
+
 
 type SliderCodeProps = {
-    data: Project[];
+    data: (Web3I18 & Web3Stat)[];
+    slider_list_tittle: string
+    buttons: {
+        example: string
+        code: string[]
+    }
 }
 
-const SliderCode: React.FC<SliderCodeProps> = ({data}) => {
+const SliderCode: React.FC<SliderCodeProps> = ({data, slider_list_tittle, buttons}) => {
 
 
 
@@ -39,20 +38,20 @@ const SliderCode: React.FC<SliderCodeProps> = ({data}) => {
                         modules={[Pagination]}
                         className="h-[380px] md:h-[300px] w-[270px] xl:w-[750px] lg:w-[650px] sm:w-[550px] mt-4 flex justify-evenly items-evenly"
                     >
-                        {data.map(({ id, name, description, path, contractUrl, usos }) => (
+                        {data.map(({ id, h2, desc, path, contract, list }) => (
 
                             <SwiperSlide key={id}>
                                 <article className='flex flex-col  h-full justify-evenly items-evenly'>
 
-                                    <h2 tabIndex={0} className='text-center text-3xl text-primary-ceo font-semibold'>{name}</h2>
+                                    <h2 tabIndex={0} className='text-center text-3xl text-primary-ceo font-semibold'>{h2}</h2>
                                     <div className="mt-5 text-center">
-                                        {description}
+                                        {desc}
                                     </div>
                                     <section>
                                         <fieldset>
-                                            <legend className='text-primary-200'>Principales usos</legend>
+                                            <legend className='text-primary-200'>{slider_list_tittle}</legend>
                                             <ul>
-                                                {usos.map((uso, index) => (
+                                                {list.map((uso, index) => (
                                                     <li className='text-xs border-primary-ceo-200/10 border-b-2 rounded-sm px-2 py' key={index}>{uso}</li>
                                                 ))}</ul>
                                         </fieldset>
@@ -66,14 +65,14 @@ const SliderCode: React.FC<SliderCodeProps> = ({data}) => {
                                             target="_blank"
                                             className="p-2 transition duration-150 rounded-lg bg-secondary-ceo hover:bg-secondary/80"
                                         >
-                                            Ejemplo desplegado
+                                            {buttons.example}
                                         </Link>
                                         <Link
-                                            href={contractUrl}
+                                            href={contract}
                                             target="_blank"
                                             className="p-2 transition duration-150 rounded-lg bg-slate-500 hover:bg-slate-500/80"
                                         >
-                                            <span className='hidden lg:inline'>Github </span>Código Blockchain
+                                            <span className='hidden lg:inline'>{buttons.code[0]} </span>{buttons.code[1]}
                                         </Link>
                                     </div>
                                 </article>

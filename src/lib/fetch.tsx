@@ -1,14 +1,5 @@
 import { readRoleUC } from "@/core/application/usecases/entities/role";
-import { connectToDB } from "@/core/infrastructure/connectors/mongo-db";
-import { Web3ProjectModel } from "@/core/infrastructure/mongoose/schemas/web3_project-schema";
-// import { AdminModel, UserModel } from "@/models/user-schema";
 
-
-export const fetchWeb3Projects = async () => {
-  await connectToDB();
-  const web3projects = await Web3ProjectModel.find();
-  return web3projects;
-}
 
 
 // ver si necesito fetchAdmins, yo creo que no es necesario!

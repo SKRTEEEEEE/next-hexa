@@ -18,6 +18,7 @@ import Link from "next/link";
 import { cn, generatePaymentLink } from "@/lib/utils";
 import { User } from "@/core/domain/entities/User";
 import { RoleType } from "@/core/domain/entities/Role";
+import {Link as LinkLocale} from "@/i18n/routing"
 
 type State = {
   actualRole: string;
@@ -131,7 +132,7 @@ export function SubscriptionPlansDialog({ buttonTitle, user }: { buttonTitle?: s
           {selectedPlan === initialState.actualRole ? initialState.button : user === false ?"Inicia session para configurar":"Confirmar selección"}</Link>}
         </Button>
         <Button variant={"outline"} className="w-full mt-2">
-          <Link href="/academia/tarifas#comparacion">Ver todos los detalles</Link>
+          <LinkLocale href={"/academia/tarifas#comparacion" as any}>Ver todos los detalles</LinkLocale>
         </Button>
       </DialogContent>
     </Dialog>

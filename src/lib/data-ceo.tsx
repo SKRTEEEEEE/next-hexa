@@ -1,10 +1,4 @@
 import { BookText, CodeSquare,  HomeIcon, UserRound, Linkedin, Github, Mail, Link, Info } from "lucide-react";
-import { SiChakraui, SiNextui, SiSolidity, SiStyledcomponents, SiSwiper, SiTailwindcss  } from "react-icons/si";
-import { TbBrandNextjs, TbBrandThreejs } from "react-icons/tb";
-import { SiThirdweb } from "react-icons/si";
-
-
-
 
 export const socialNetworks = [
     {
@@ -28,62 +22,81 @@ export const socialNetworks = [
     },
 
 ];
-
 export const itemsNavbar = [
     {
         id: 1,
         title: "Home",
-        icon: <HomeIcon size={25} color="#fff" strokeWidth={1} aria-describedby="Home"/>,
+        icon: <HomeIcon size={25} color="#fff" strokeWidth={1} aria-describedby="Home" />,
         link: "/",
-        desc: "Volver al inicio"
+        desc: {
+            es: "Volver al inicio",
+            de: "Zur Startseite zurückkehren",
+            en: "Go to start"
+        }
     },
     {
         id: 2,
         title: "Perfil",
-        icon: <UserRound size={25} color="#fff" strokeWidth={1} aria-describedby="Perfil"/>,
+        icon: <UserRound size={25} color="#fff" strokeWidth={1} aria-describedby="Perfil" />,
         link: "/ceo",
-        desc: "Presentación perfil"
+        desc: {
+            es: "Presentación perfil",
+            de: "Profilpräsentation",
+            en: "Profile presentation"
+        }
     },
     {
         id: 3,
         title: "Información",
-        icon: <Info  size={25} color="#fff" strokeWidth={1} aria-describedby="Información"/>,
+        icon: <Info size={25} color="#fff" strokeWidth={1} aria-describedby="Información" />,
         link: "/ceo/info",
-        desc: "Principal Información tecnológica"
-        
+        desc: {
+            es: "Principal Información tecnológica",
+            de: "Wichtige technologische Informationen",
+            en: "Main technological information"
+        }
     },
     {
         id: 4,
         title: "Portafolio",
-        icon: <CodeSquare size={25} color="#fff" strokeWidth={1} aria-describedby="Portafolio"/>,
+        icon: <CodeSquare size={25} color="#fff" strokeWidth={1} aria-describedby="Portafolio" />,
         link: "/ceo/portafolio",
-        desc: "Principales proyectos de código abierto"
-        
+        desc: {
+            es: "Principales proyectos de código abierto",
+            de: "Wichtigste Open-Source-Projekte",
+            en: "Main open-source projects"
+        }
     },
     {
         id: 5,
         title: "Estudios",
-        icon: <BookText  size={25} color="#fff" strokeWidth={1} aria-describedby="Estudios"/>,
+        icon: <BookText size={25} color="#fff" strokeWidth={1} aria-describedby="Estudios" />,
         link: "/ceo/estudios",
-        desc: "Estudios certificados oficiales"
+        desc: {
+            es: "Estudios certificados oficiales",
+            de: "Offizielle zertifizierte Studien",
+            en: "Official certified studies"
+        }
     },
     {
         id: 6,
         title: "Code",
-        icon: <Link  size={25} color="#fff" strokeWidth={1} aria-describedby="Code"/>,
+        icon: <Link size={25} color="#fff" strokeWidth={1} aria-describedby="Code" />,
         link: "/ceo/code",
-        desc: "Información sobre proyectos de código abierto web3"
+        desc: {
+            es: "Información sobre proyectos de código abierto web3",
+            de: "Informationen zu Open-Source-Web3-Projekten",
+            en: "Information about open-source web3 projects"
+        }
     },
 ];
+
 // De aquí, para abajo, se ha de recoger/guardar en la bdd
 export const dataStudiesPage = [
     {
         id: 1,
-        title: "Curso Fullstack Javascript",
         institution: "CIEF",
-        date: "Actualidad",
-        description: 
-            "Curso centrado en aprender a crear sitios web interactivos usando HTML, CSS y JavaScript en el lado del cliente, y Node.js en el servidor con MySQL para almacenar datos.",
+        date: "30/10/24",
         badges: [
             "JavaScript", "HTML", "CSS", "Node.js", "Express.js", "MySQL", "BDD", "OOP", "DOM"
         ],
@@ -91,10 +104,8 @@ export const dataStudiesPage = [
     },
     {
         id: 2,
-        title: "Chainlink bootcamp 2024",
         institution: "Chainlink",
         date: "20/01/24",
-        description: "Entrenamiento oficial para dominar el uso de la tecnología de Oracle Chainlink, abarcando conceptos de blockchain, Solidity, tokens ERC20, NFTs y automatización de Chainlink.",
         badges: [
             "Chainlink", "Blockchain", "Solidity", "ERC721", "ERC20", "Blockchain Oracles", "CCIP", "Chainlink Functions"
         ],
@@ -102,10 +113,8 @@ export const dataStudiesPage = [
     },
     {
         id: 3,
-        title: "Big Data I",
         institution: "Coliseum",
         date: "19/12/23",
-        description: "Curso introductorio sobre el uso de Python para manipular grandes conjuntos de datos, incluyendo estadísticas, procesamiento y visualización de datos.",
         badges: [
             "Python"
         ],
@@ -116,22 +125,19 @@ export const dataStudiesPage = [
 export const dataCounter = [
     {
         id: 0,
-        endCounter: 1,
-        text: "Año de experiencia",
+        endCounter: 2,
         lineRight: true,
         lineRightMobile: true,
     },
     {
         id: 1,
         endCounter: 80,
-        text: "Funcionalidades desarrolladas",
         lineRight: true,
         lineRightMobile: false,
     },
     {
         id: 2,
-        endCounter: 20,
-        text: "Proyectos en github",
+        endCounter: 30,
         lineRight: true,
         lineRightMobile: true,
     },
@@ -145,261 +151,6 @@ export const dataCounter = [
 ];
 
 
-export const dataPortfolio = [
-
-    // {
-    //     id: 1,
-    //     title: "Presentación responsiva",
-    //     image: "/image-1.png",
-    //     urlGithub: "https://github.com/SKRTEEEEEE",
-    //     urlDemo: "https://tokenizacion.my.canva.site/ventajas-tecnologicas-3",
-    //     operative: true,
-    // },
-    {
-        id: 2,
-        title: "Perfil Web del Desarrollador",
-        description: "Mi pagina de perfil como desarrollador",
-        objetivo: "Mostrar mis habilidades como desarrollador Fullstack",
-        objetivos:[ "SCRUM", "buena documentación", "autorrealización", "compatibilidad frontend"],
-        technologies: {
-            frontend: [{
-                title: "NextJS",
-                icon: <TbBrandNextjs size={40}/>,
-                version: "v14",
-                desc: "parte principal"
-            },
-            {
-                title: "TailwindCSS",
-                icon: <SiTailwindcss size={40}/>,
-                version: "v3",
-                desc: "parte visual principal"
-            },
-            {
-                title: "SwiperJs y TsParticles",
-                icon: <SiSwiper size={40}/>,
-                version: "",
-                desc: "parte visual interactiva"
-            }
-            ],
-            backend:[{
-                title: "NextJS",
-                icon: <TbBrandNextjs size={40}/>,
-                version: "v14",
-                desc: "parte principal"
-            },
-            ]
-            
-        },
-        image: "/ceo/image-3.png",
-        urlGithub: "https://github.com/SKRTEEEEEE/profile-page",
-        urlDemo: "",
-        operative: true,
-        ejemplo: true,
-    },
-    {
-        id: 3,
-        title: "Blockchain para empresas",
-        description: "Pagina de presentación blockchain para empresas",
-        objetivo: "Mostrar las posibilidades que ofrece la blockchain para empresas",
-        objetivos:[ "conceptos teóricos", "frontend y visual", "auto-realización", "atraer inversiones"],
-        technologies: {
-            frontend: [{
-                title: "NextJS",
-                icon: <TbBrandNextjs size={40}/>,
-                version: "v14",
-                desc: "parte principal"
-            },
-            {
-                title: "TailwindCSS",
-                icon: <SiTailwindcss size={40}/>,
-                version: "v3",
-                desc: "parte visual principal"
-            },
-            {
-                title: "SwiperJs y TsParticles",
-                icon: <SiSwiper size={40}/>,
-                version: "",
-                desc: "parte visual interactiva"
-            }
-            ]
-            
-        },
-        image: "/ceo/image-2.png",
-        urlGithub: "https://github.com/SKRTEEEEEE/blockchain-presentation",
-        urlDemo: "https://blockchain-presentation-eta.vercel.app/",
-        operative: true,
-        ejemplo: true,
-    },
- 
-    {
-        id: 4,
-        title: "Ejemplos Aplicaciones Descentralizadas",
-        description: "Ejemplos de aplicaciones descentralizadas que se pueden personalizar posteriormente",
-        objetivo: "Mostrar mis habilidades como desarrollador Fullstack blockchain",
-        objetivos:[ "Smart-Contracts", "integración web3/web", "compatibilidad frontend", "uso blockchain"],
-        technologies: {
-            frontend: [{
-                title: "NextJS",
-                icon: <TbBrandNextjs size={40}/>,
-                version: "v14",
-                desc: "parte principal"
-            },
-            {
-                title: "TailwindCSS",
-                icon: <SiTailwindcss size={40}/>,
-                version: "v3",
-                desc: "parte visual principal"
-            },
-            {
-                title: "Styled Compoenents",
-                icon: <SiStyledcomponents size={40} />,
-                version: "",
-                desc: "parte visual principal"
-            },
-            {
-                title: "ChakraUI",
-                icon: <SiChakraui size={40}/>,
-                version: "",
-                desc: "parte visual interactiva"
-            },
-            {
-                title: "ThreeJS",
-                icon: <TbBrandThreejs  size={40}/>,
-                version: "",
-                desc: "parte visual interactiva"
-            },
-            ],
-            backend:[{
-                title: "NextJS",
-                icon: <TbBrandNextjs size={40}/>,
-                version: "v14",
-                desc: "parte principal"
-            },
-            {
-                title: "Thirdweb SDK",
-                icon: <SiThirdweb size={40} />,
-                version: "v4",
-                desc: "conectividad web/blockchain"
-            },
-            {
-                title: "Thirdweb CLI",
-                icon: <SiThirdweb  size={40}/>,
-                version: "",
-                desc: "despliegue Smart Contracts"
-            },
-            {
-                title: "Solidity",
-                icon: <SiSolidity size={40} />,
-                version: "",
-                desc: "creación Smart Contracts"
-            },
-            ]
-            
-        },
-        image: "/ceo/image-4.png",
-        urlGithub: "https://github.com/SKRTEEEEEE/ejemplos-dApps",
-        urlDemo: "http://ejemplos-d-apps.vercel.app/",
-        operative: true,
-        ejemplo: true,
-    },
-    {
-        id: 5,
-        title: "Web Perfil v2",
-        description: "Pagina de perfil como desarrollador mejorada",
-        objetivo: "Mejorar la parte del Backend para automatizar procesos",
-        objetivos:[ "SCRUM", "proyecto 'propio 100%'", "compatibilidad tecnologías", "añadir backend"],
-        technologies: {
-            frontend: [{
-                title: "NextJS",
-                icon: <TbBrandNextjs size={40} />,
-                version: "v14",
-                desc: "parte principal"
-            },
-            {
-                title: "TailwindCSS",
-                icon: <SiTailwindcss size={40}/>,
-                version: "v3",
-                desc: "parte visual principal"
-            },
-            {
-                title: "SwiperJs y TsParticles",
-                icon: <SiSwiper size={40}/>,
-                version: "",
-                desc: "parte visual interactiva"
-            }
-            ],
-            backend:[{
-                title: "NextJS",
-                icon: <TbBrandNextjs size={40}/>,
-                version: "v14",
-                desc: "parte principal"
-            },
-            ]
-            
-        },
-        image: "/ceo/image-3.jpg",
-        urlGithub: "https://github.com/SKRTEEEEEE/profile-page/tree/v01.02/",
-        urlDemo: "",
-        operative: false,
-        ejemplo: true,
-    },
-    // {
-    //     id: 6,
-    //     title: "Web Dinámica",
-    // description: "Mi pagina de perfil como desarrollador",
-    // objetivo: "Mostrar mis habilidades como desarrollador Fullstack",
-    //     objetivos:[ "SCRUM", "buena documentación", "proyecto 'propio 100%'", "compatibilidad tecnologías"],
-    //     technologies: {
-    //         frontend: [{
-    //             title: "NextJS",
-    //             icon: <TbBrandNextjs />,
-    //             version: "v14",
-    //             desc: "parte principal"
-    //         },
-    //         {
-    //             title: "TailwindCSS",
-    //             icon: <SiTailwindcss />,
-    //             version: "v3",
-    //             desc: "parte visual principal"
-    //         },
-    //         {
-    //             title: "SwiperJs y TsParticles",
-    //             icon: <SiSwiper />,
-    //             version: "",
-    //             desc: "parte visual interactiva"
-    //         }
-    //         ],
-    //         backend:[{
-    //             title: "NextJS",
-    //             icon: <TbBrandNextjs />,
-    //             version: "v14",
-    //             desc: "parte principal"
-    //         },
-    //         ]
-            
-    //     },
-    //     image: "/image-6.jpg",
-    //     urlGithub: "#!",
-    //     urlDemo: "#!",
-    //     operative: false,
-    // },
-    // {
-    //     id: 7,
-    //     title: "Dark Web ",
-    //     image: "/image-7.jpg",
-    //     urlGithub: "#!",
-    //     urlDemo: "#!",
-    //     operative: false,
-    // },
-    // {
-    //     id: 8,
-    //     title: "E-commerce web",
-    //     image: "/image-8.jpg",
-    //     urlGithub: "#!",
-    //     urlDemo: "#!",
-    //     operative: false,
-    // }
-];
 
 export const admins = [
     "0x490bb233c707A0841cA52979Be4D88B6621d1988",

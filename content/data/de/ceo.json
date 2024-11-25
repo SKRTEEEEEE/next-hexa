@@ -1,0 +1,410 @@
+{
+    "ceo": {
+        "images": {
+            "circular": "Kreisförmiges Bild eines futuristischen Dorfes",
+            "tablet_office": "Technologischer Superheld mit einem Tablet in der Hand",
+            "tablet": "Avatar mit einem Tablet in der Hand",
+            "hero": "Profil-Avatar",
+            "office": "Programmierer im Büro beim Programmieren",
+            "pixel": "Pixeliertes Avatar-Bild"
+        },
+        "main": {
+            "introduction": {
+                "greeting": "Hallo",
+                "introduction": "ich bin",
+                "developer_title": "Entwickler",
+                "type_animation": {
+                    "1": "der nächsten Generation der dezentralisierten Webentwicklung",
+                    "2": "für Web-Branding innovativer Projekte",
+                    "3": "für die Interaktion zwischen der realen Welt und Web3",
+                    "4": "unter Nutzung aktueller und effizienter Web-Technologien."
+                },
+                "description": "Fullstack-Entwickler, spezialisiert auf skalierbare und dezentralisierte Technologien, mit Fokus auf ein angenehmes Benutzererlebnis durch interaktive und sichere Funktionalitäten.",
+                "buttons": {
+                    "view_projects": "Projekte ansehen",
+                    "contact_me": "Kontaktiere mich"
+                }
+            }
+        },
+        "proyectos": {
+            "main": {
+                "h1": "Meine veröffentlichten Beispiel-Webprojekte:",
+                "ul": {
+                    "buttons": {
+                        "url_demo": [
+                            "Gehe",
+                            "zum Projekt"
+                        ],
+                        "url_github": [
+                            "Sieh dir",
+                            "den Code an"
+                        ],
+                        "url_project": [
+                            "Info",
+                            "zum Projekt"
+                        ]
+                    }
+                }
+            },
+            "id": [
+                {
+                    "id": 2,
+                    "title": "Web-Entwickler-Profil",
+                    "description": "Meine Profilseite als Entwickler",
+                    "main_objetive": "Meine Fähigkeiten als Fullstack-Entwickler zeigen",
+                    "objetives": [
+                        "SCRUM",
+                        "gute Dokumentation",
+                        "Selbstverwirklichung",
+                        "Frontend-Kompatibilität"
+                    ],
+                    "technologies": {
+                        "frontend": [
+                            {
+                                "title": "NextJS",
+                                "iconName": "TbBrandNextjs",
+                                "version": "v14",
+                                "desc": "Hauptteil"
+                            },
+                            {
+                                "title": "TailwindCSS",
+                                "iconName": "SiTailwindcss",
+                                "version": "v3",
+                                "desc": "Hauptsichtbarkeit"
+                            },
+                            {
+                                "title": "SwiperJs und TsParticles",
+                                "iconName": "SiSwiper",
+                                "version": "",
+                                "desc": "Interaktive visuelle Darstellung"
+                            }
+                        ],
+                        "backend": [
+                            {
+                                "title": "NextJS",
+                                "iconName": "TbBrandNextjs",
+                                "version": "v14",
+                                "desc": "Hauptteil"
+                            }
+                        ]
+                    },
+                    "image": "/ceo/image-3.png",
+                    "urlGithub": "https://github.com/SKRTEEEEEE/profile-page",
+                    "urlDemo": "",
+                    "operative": true,
+                    "ejemplo": true
+                },
+                {
+                    "id": 3,
+                    "title": "Blockchain für Unternehmen",
+                    "description": "Blockchain-Präsentationsseite für Unternehmen",
+                    "main_objetive": "Die Möglichkeiten der Blockchain für Unternehmen zeigen",
+                    "objetives": [
+                        "Theoretische Konzepte",
+                        "Frontend und visuelle Darstellung",
+                        "Selbstverwirklichung",
+                        "Investitionen anziehen"
+                    ],
+                    "technologies": {
+                        "frontend": [
+                            {
+                                "title": "NextJS",
+                                "iconName": "TbBrandNextjs",
+                                "version": "v14",
+                                "desc": "Hauptteil"
+                            },
+                            {
+                                "title": "TailwindCSS",
+                                "iconName": "SiTailwindcss",
+                                "version": "v3",
+                                "desc": "Hauptsichtbarkeit"
+                            },
+                            {
+                                "title": "SwiperJs und TsParticles",
+                                "iconName": "SiSwiper",
+                                "version": "",
+                                "desc": "Interaktive visuelle Darstellung"
+                            }
+                        ]
+                    },
+                    "image": "/ceo/image-2.png",
+                    "urlGithub": "https://github.com/SKRTEEEEEE/blockchain-presentation",
+                    "urlDemo": "https://blockchain-presentation-eta.vercel.app/",
+                    "operative": true,
+                    "ejemplo": true
+                },
+                {
+                    "id": 4,
+                    "title": "Beispiel für dezentrale Anwendungen",
+                    "description": "Beispiele für dezentrale Anwendungen, die später angepasst werden können",
+                    "main_objetive": "Meine Fähigkeiten als Fullstack-Blockchain-Entwickler zeigen",
+                    "objetives": [
+                        "Smart-Contracts",
+                        "Web3/Web-Integration",
+                        "Frontend-Kompatibilität",
+                        "Blockchain-Nutzung"
+                    ],
+                    "technologies": {
+                        "frontend": [
+                            {
+                                "title": "NextJS",
+                                "iconName": "TbBrandNextjs",
+                                "version": "v14",
+                                "desc": "Hauptteil"
+                            },
+                            {
+                                "title": "TailwindCSS",
+                                "iconName": "SiTailwindcss",
+                                "version": "v3",
+                                "desc": "Hauptsichtbarkeit"
+                            },
+                            {
+                                "title": "Styled Components",
+                                "iconName": "SiStyledcomponents",
+                                "version": "",
+                                "desc": "Hauptsichtbarkeit"
+                            },
+                            {
+                                "title": "ChakraUI",
+                                "iconName": "SiChakraui",
+                                "version": "",
+                                "desc": "Interaktive visuelle Darstellung"
+                            },
+                            {
+                                "title": "ThreeJS",
+                                "iconName": "TbBrandThreejs",
+                                "version": "",
+                                "desc": "Interaktive visuelle Darstellung"
+                            }
+                        ],
+                        "backend": [
+                            {
+                                "title": "NextJS",
+                                "iconName": "TbBrandNextjs",
+                                "version": "v14",
+                                "desc": "Hauptteil"
+                            },
+                            {
+                                "title": "Thirdweb SDK",
+                                "iconName": "SiThirdweb",
+                                "version": "v4",
+                                "desc": "Web/Blockchain-Konnektivität"
+                            },
+                            {
+                                "title": "Thirdweb CLI",
+                                "iconName": "SiThirdweb",
+                                "version": "",
+                                "desc": "Smart Contracts bereitstellen"
+                            },
+                            {
+                                "title": "Solidity",
+                                "iconName": "SiSolidity",
+                                "version": "",
+                                "desc": "Smart Contracts erstellen"
+                            }
+                        ]
+                    },
+                    "image": "/ceo/image-4.png",
+                    "urlGithub": "https://github.com/SKRTEEEEEE/ejemplos-dApps",
+                    "urlDemo": "http://ejemplos-d-apps.vercel.app/",
+                    "operative": true,
+                    "ejemplo": true
+                },
+                {
+                    "id": 5,
+                    "title": "Web Profil v2",
+                    "description": "Verbesserte Profilseite als Entwickler",
+                    "main_objetive": "Verbesserung des Backend-Teils zur Automatisierung von Prozessen",
+                    "objetives": [
+                        "SCRUM",
+                        "100% eigenes Projekt",
+                        "Technologiekompatibilität",
+                        "Backend hinzufügen"
+                    ],
+                    "technologies": {
+                        "frontend": [
+                            {
+                                "title": "NextJS",
+                                "iconName": "TbBrandNextjs",
+                                "version": "v14",
+                                "desc": "Hauptteil"
+                            },
+                            {
+                                "title": "TailwindCSS",
+                                "iconName": "SiTailwindcss",
+                                "version": "v3",
+                                "desc": "Hauptsichtbarkeit"
+                            },
+                            {
+                                "title": "SwiperJs und TsParticles",
+                                "iconName": "SiSwiper",
+                                "version": "",
+                                "desc": "Interaktive visuelle Darstellung"
+                            }
+                        ],
+                        "backend": [
+                            {
+                                "title": "NextJS",
+                                "iconName": "TbBrandNextjs",
+                                "version": "v14",
+                                "desc": "Hauptteil"
+                            }
+                        ]
+                    },
+                    "image": "/ceo/image-3.jpg",
+                    "urlGithub": "https://github.com/SKRTEEEEEE/profile-page/tree/v01.02/",
+                    "urlDemo": "",
+                    "operative": false,
+                    "ejemplo": true
+                }
+            ],
+            "id_static": {
+                "main_objetive": "Ziel",
+                "buttons": {
+                    "back": [
+                        "Zurück",
+                        "zu Projekten"
+                    ],
+                    "code": [
+                        "Anzeigen",
+                        "Code"
+                    ],
+                    "project": [
+                        "Website",
+                        "besuchen"
+                    ]
+                }
+            }
+        },
+        "info": {
+            "section": {
+                "skills": {
+                    "h1": [
+                        "Meine",
+                        "Fähigkeiten"
+                    ],
+                    "h2": "Mein berufliches Profil",
+                    "buttons": {
+                        "tech": "Vollständige Liste der verwendeten Technologien",
+                        "admin": "Admin-Seite anzeigen"
+                    }
+                },
+                "slider": {
+                    "h2": "Hauptsächlich verwendete Sprachen",
+                    "affinity": "Affinität",
+                    "exp": "Erfahrung",
+                    "values": {
+                        "max": "Maximal",
+                        "high": "Hoch",
+                        "neut": "Mittelmäßig",
+                        "low": "Niedrig",
+                        "min": "Minimal"
+                    }
+                }
+            }
+        },
+        "portafolio": {
+            "h1": [
+                "Vorgestellte",
+                "Open-Source",
+                "-Beispiele"
+            ]
+        },
+        "estudios": {
+            "h1": [
+                "Zertifizierte Studien",
+                "hervorgehoben"
+            ],
+            "list": {
+                "1": {
+                    "title": "Fullstack Kurs Grad 3",
+                    "desc": "Kurs, der sich darauf konzentriert, interaktive Websites mit HTML, CSS, Js auf der Client-Seite, Node.js, PHP auf der Server-Seite, MySQL zum Speichern von Daten und anderen Webtechnologien zu erstellen."
+                },
+                "2": {
+                    "title": "Chainlink Bootcamp 2024",
+                    "desc": "Offizielles Training zur Beherrschung der Chainlink-Oracle-Technologie, einschließlich Blockchain-Konzepte, Solidity, ERC20-Token, NFTs und Chainlink-Automatisierung."
+                },
+                "3": {
+                    "title": "Big Data I",
+                    "desc": "Einführungskurs zur Verwendung von Python für die Verarbeitung großer Datensätze, einschließlich Statistik, Verarbeitung und Datenvisualisierung."
+                }
+            },
+            "counter": {
+                "0": "Jahre Erfahrung",
+                "1": "Entwickelte Funktionen",
+                "2": "Projekte auf GitHub"
+            }
+        },
+        "code": {
+            "h1": [
+                "Projektbeispiele",
+                "für Web3-Entwicklung"
+            ],
+            "slider_list_tittle": "Hauptanwendungen",
+            "slider": [
+                {
+                    "id": 1,
+                    "h2": "Lotterie",
+                    "desc": "Mitgliedschafts-NFT-Lotterieprogramm, das eine bestehende Blockchain und deren Sicherheit zur Verwaltung der Lotterie nutzt",
+                    "list": [
+                        "Zugang zu exklusiven Inhalten für Teilnehmer",
+                        "Sicherheit beim Austausch und der Nutzung des NFT",
+                        "Vorteile im Zusammenhang mit ERC1155-Token"
+                    ],
+                    "instructions": [
+                        "Eine Wallet verbinden",
+                        "SepoliaETH-Testtokens erhalten",
+                        "Die gewünschte Anzahl von Tokens angeben",
+                        "Den Kauf mit der Wallet akzeptieren",
+                        "Am Monatsende prüfen, ob Sie gewonnen haben",
+                        "Sie können es auf Opensea oder anderen NFT-Plattformen überprüfen",
+                        "Oder auf der Raffle-Seite im Abschnitt der Gewinner"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "h2": "Mitgliedschafts-NFT",
+                    "desc": "Mitgliedschaftsprogramm mit zugehörigem NFT, das Blockchain zur Verwaltung der Mitgliedschaft verwendet",
+                    "list": [
+                        "Zugang zu exklusiven Inhalten für Inhaber",
+                        "Sicherheit beim Austausch und der Nutzung des NFT",
+                        "Vorteile im Zusammenhang mit ERC1155-Token"
+                    ],
+                    "instructions": [
+                        "Eine Wallet verbinden",
+                        "SepoliaETH-Testtokens erhalten",
+                        "Auf die Schaltfläche 'NFT kaufen' klicken",
+                        "Den Kauf mit der Wallet akzeptieren",
+                        "Auf Opensea oder anderen NFT-Plattformen prüfen",
+                        "Oder auf der Seite, auf der Sie das NFT gerade gekauft haben",
+                        "Jetzt können Sie auf die Mitgliedschaftsseite und deren exklusive Inhalte zugreifen"
+                    ]
+                },
+                {
+                    "id": 3,
+                    "h2": "Sichere Speicherung",
+                    "desc": "Programm für sichere Speicherung, das eine bestehende Blockchain und deren Unveränderlichkeit zur Datenspeicherung nutzt",
+                    "list": [
+                        "Maximale Sicherheit bei der Datenspeicherung",
+                        "Zugriff auf die Daten über Webtechnologie",
+                        "Vorteile im Zusammenhang mit Blockchain-Sicherheit"
+                    ],
+                    "instructions": [
+                        "Eine Wallet verbinden",
+                        "Eine zu speichernde Zahl eingeben",
+                        "Auf die Schaltfläche 'Speichern' klicken",
+                        "Die Interaktion mit dem Vertrag akzeptieren",
+                        "Auf der Seite überprüfen, wie die Zahl aktualisiert wurde"
+                    ]
+                }
+            ],
+            "buttons": {
+                "example": "Bereitgestelltes Beispiel",
+                "code": [
+                    "Github",
+                    "Blockchain-Code"
+                ]
+            }
+        }
+    }
+}

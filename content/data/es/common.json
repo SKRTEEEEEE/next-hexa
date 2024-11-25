@@ -1,0 +1,14 @@
+{
+    "common": {
+        "previous": "Anterior",
+        "next": "Siguiente"
+    },
+    "root": {
+        "h1": "Estas en la pagina ruta",
+        "links": {
+            "admin": "Ir a admin",
+            "academia": "Ir a academia",
+            "ceo": "Ir a sobre mi"
+        }
+    }
+}

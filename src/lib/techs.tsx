@@ -10,19 +10,20 @@ export function getColorByRange(numValue:number):BadgeAndValue{
     let badge: string;
     let value: string;
     if (numValue > 80) {
-        badge="darkgreen";value="Máxima" // darkgreen para valores >= 80
+        badge="darkgreen";
+        value="max" // darkgreen para valores >= 80
     } else if (numValue > 60) {
         badge = "brightgreen";
-        value = "Alta"; // brightgreen para valores >= 60 y < 80
+        value = "high"; // brightgreen para valores >= 60 y < 80
     } else if (numValue > 40) {
         badge = "blue";
-        value = "Moderada"; // "moderada" para valores >= 40 y < 60
+        value = "neut"; // "moderada" para valores >= 40 y < 60
     } else if (numValue >= 20) {
         badge = "yellow";
-        value = "Baja"; // "baja" para valores >= 20 y < 40
+        value = "low"; // "baja" para valores >= 20 y < 40
     } else {
         badge = "red";
-        value = "Mínima"; // "minima" para valores < 20
+        value = "min"; // "minima" para valores < 20
     }
     return { badge, value };
 }

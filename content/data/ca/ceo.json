@@ -1,0 +1,401 @@
+{
+    "ceo": {
+        "images": {
+            "circular": "Imatge circular d'un poblat futurista",
+            "tablet_office": "Superheroi tecnologíc amb una tauleta a la mà",
+            "tablet": "Avatar amb una tauleta a la má",
+            "hero": "Avatar de perfil",
+            "office": "Programador a la oficina programant",
+            "pixel": "Imatge de avatar pixelada"
+        },
+        "main": {
+            "introduction": {
+                "greeting": "Hola",
+                "introduction": "soc",
+                "developer_title": "Desenvolupador",
+                "type_animation": {
+                    "1": "de la nova generació web descentralitzada",
+                    "2": "de branding web per a projectes innovadors",
+                    "3": "d'interacció entre món real i web3",
+                    "4": "utilitzant tecnologies web actuals i eficients."
+                },
+                "description": "Fullstack especialitzat en tecnologies escalables i descentralitzades, enfocat en oferir una experiència d'usuari agradable a través de funcionalitat interactiva i segura.",
+                "buttons": {
+                    "view_projects": "Veure projectes",
+                    "contact_me": "Contacta amb mi"
+                }
+            }
+        },
+        "proyectos": {
+            "main": {
+                "h1": "Els meus projectes web de mostra desplegats:",
+                "ul": {
+                    "buttons": {
+                        "url_demo": [
+                            "Anar",
+                            "al projecte"
+                        ],
+                        "url_github": [
+                            "Veure",
+                            "Codi"
+                        ],
+                        "url_project": [
+                            "Info",
+                            "del projecte"
+                        ]
+                    }
+                }
+            },
+            "id": [
+                {
+                    "id": 2,
+                    "title": "Perfil Web del Desenvolupador",
+                    "description": "La meva pàgina de perfil com a desenvolupador",
+                    "main_objetive": "Mostrar les meves habilitats com a desenvolupador Fullstack",
+                    "objetives": [
+                        "SCRUM",
+                        "bona documentació",
+                        "autorealització",
+                        "compatibilitat frontend"
+                    ],
+                    "technologies": {
+                        "frontend": [
+                            {
+                                "title": "NextJS",
+                                "iconName": "TbBrandNextjs",
+                                "version": "v14",
+                                "desc": "part principal"
+                            },
+                            {
+                                "title": "TailwindCSS",
+                                "iconName": "SiTailwindcss",
+                                "version": "v3",
+                                "desc": "part visual principal"
+                            },
+                            {
+                                "title": "SwiperJs i TsParticles",
+                                "iconName": "SiSwiper",
+                                "version": "",
+                                "desc": "part visual interactiva"
+                            }
+                        ],
+                        "backend": [
+                            {
+                                "title": "NextJS",
+                                "iconName": "TbBrandNextjs",
+                                "version": "v14",
+                                "desc": "part principal"
+                            }
+                        ]
+                    },
+                    "image": "/ceo/image-3.png",
+                    "urlGithub": "https://github.com/SKRTEEEEEE/profile-page",
+                    "urlDemo": "",
+                    "operative": true,
+                    "ejemplo": true
+                },
+                {
+                    "id": 3,
+                    "title": "Blockchain per a empreses",
+                    "description": "Pàgina de presentació blockchain per a empreses",
+                    "main_objetive": "Mostrar les possibilitats que ofereix la blockchain per a empreses",
+                    "objetives": [
+                        "conceptes teòrics",
+                        "frontend i visual",
+                        "auto-realització",
+                        "atraure inversions"
+                    ],
+                    "technologies": {
+                        "frontend": [
+                            {
+                                "title": "NextJS",
+                                "iconName": "TbBrandNextjs",
+                                "version": "v14",
+                                "desc": "part principal"
+                            },
+                            {
+                                "title": "TailwindCSS",
+                                "iconName": "SiTailwindcss",
+                                "version": "v3",
+                                "desc": "part visual principal"
+                            },
+                            {
+                                "title": "SwiperJs i TsParticles",
+                                "iconName": "SiSwiper",
+                                "version": "",
+                                "desc": "part visual interactiva"
+                            }
+                        ]
+                    },
+                    "image": "/ceo/image-2.png",
+                    "urlGithub": "https://github.com/SKRTEEEEEE/blockchain-presentation",
+                    "urlDemo": "https://blockchain-presentation-eta.vercel.app/",
+                    "operative": true,
+                    "ejemplo": true
+                },
+                {
+                    "id": 4,
+                    "title": "Exemples d'Aplicacions Descentralitzades",
+                    "description": "Exemples d'aplicacions descentralitzades que es poden personalitzar posteriorment",
+                    "main_objetive": "Mostrar les meves habilitats com a desenvolupador Fullstack blockchain",
+                    "objetives": [
+                        "Smart-Contracts",
+                        "integració web3/web",
+                        "compatibilitat frontend",
+                        "ús blockchain"
+                    ],
+                    "technologies": {
+                        "frontend": [
+                            {
+                                "title": "NextJS",
+                                "iconName": "TbBrandNextjs",
+                                "version": "v14",
+                                "desc": "part principal"
+                            },
+                            {
+                                "title": "TailwindCSS",
+                                "iconName": "SiTailwindcss",
+                                "version": "v3",
+                                "desc": "part visual principal"
+                            },
+                            {
+                                "title": "Styled Components",
+                                "iconName": "SiStyledcomponents",
+                                "version": "",
+                                "desc": "part visual principal"
+                            },
+                            {
+                                "title": "ChakraUI",
+                                "iconName": "SiChakraui",
+                                "version": "",
+                                "desc": "part visual interactiva"
+                            },
+                            {
+                                "title": "ThreeJS",
+                                "iconName": "TbBrandThreejs",
+                                "version": "",
+                                "desc": "part visual interactiva"
+                            }
+                        ],
+                        "backend": [
+                            {
+                                "title": "NextJS",
+                                "iconName": "TbBrandNextjs",
+                                "version": "v14",
+                                "desc": "part principal"
+                            },
+                            {
+                                "title": "Thirdweb SDK",
+                                "iconName": "SiThirdweb",
+                                "version": "v4",
+                                "desc": "connectivitat web/blockchain"
+                            },
+                            {
+                                "title": "Thirdweb CLI",
+                                "iconName": "SiThirdweb",
+                                "version": "",
+                                "desc": "desplegament Smart Contracts"
+                            },
+                            {
+                                "title": "Solidity",
+                                "iconName": "SiSolidity",
+                                "version": "",
+                                "desc": "creació Smart Contracts"
+                            }
+                        ]
+                    },
+                    "image": "/ceo/image-4.png",
+                    "urlGithub": "https://github.com/SKRTEEEEEE/ejemplos-dApps",
+                    "urlDemo": "http://ejemplos-d-apps.vercel.app/",
+                    "operative": true,
+                    "ejemplo": true
+                },
+                {
+                    "id": 5,
+                    "title": "Web Perfil v2",
+                    "description": "Pàgina de perfil com a desenvolupador millorada",
+                    "main_objetive": "Millorar la part del Backend per automatitzar processos",
+                    "objetives": [
+                        "SCRUM",
+                        "projecte 'propi 100%'",
+                        "compatibilitat tecnologies",
+                        "afegir backend"
+                    ],
+                    "technologies": {
+                        "frontend": [
+                            {
+                                "title": "NextJS",
+                                "iconName": "TbBrandNextjs",
+                                "version": "v14",
+                                "desc": "part principal"
+                            },
+                            {
+                                "title": "TailwindCSS",
+                                "iconName": "SiTailwindcss",
+                                "version": "v3",
+                                "desc": "part visual principal"
+                            },
+                            {
+                                "title": "SwiperJs i TsParticles",
+                                "iconName": "SiSwiper",
+                                "version": "",
+                                "desc": "part visual interactiva"
+                            }
+                        ],
+                        "backend": [
+                            {
+                                "title": "NextJS",
+                                "iconName": "TbBrandNextjs",
+                                "version": "v14",
+                                "desc": "part principal"
+                            }
+                        ]
+                    },
+                    "image": "/ceo/image-3.jpg",
+                    "urlGithub": "https://github.com/SKRTEEEEEE/profile-page/tree/v01.02/",
+                    "urlDemo": "",
+                    "operative": false,
+                    "ejemplo": true
+                }
+            ],
+            "id_static": {
+                "main_objetive": "Objectiu",
+                "buttons": {
+                    "back": "Tornar als projectes",
+                    "code": "Veure Codi",
+                    "project": "Anar al lloc web"
+                }
+            }
+        },
+        "info": {
+            "section": {
+                "skills": {
+                    "h1": [
+                        "Les meves",
+                        "habilitats"
+                    ],
+                    "h2": "El meu perfil professional",
+                    "buttons": {
+                        "tech": "Llista completa de tecnologies utilitzades",
+                        "admin": "Veure pàgina d'administració"
+                    }
+                },
+                "slider": {
+                    "h2": "Principals llenguatges utilitzats",
+                    "affinity": "Afinitat",
+                    "exp": "Experiència",
+                    "values": {
+                        "max": "Màxima",
+                        "high": "Alta",
+                        "neut": "Moderada",
+                        "low": "Baixa",
+                        "min": "Mínima"
+                    }
+                }
+            }
+        },
+        "portafolio": {
+            "h1": [
+                "Exemples",
+                "open-source",
+                " destacats"
+            ]
+        },
+        "estudios": {
+            "h1": [
+                "Estudis certificats",
+                "destacats"
+            ],
+            "list": {
+                "1": {
+                    "title": "Curs Fullstack Grau 3",
+                    "desc": "Curs centrat en aprendre a crear llocs webs interactuis fent servir HTML, CSS, Js en el costat client, Node.js, PHP en el costat servidor, MySQL per emmagatzemar dades y altres tecnologies web"
+                },
+                "2": {
+                    "title": "Chainlink bootcamp 2024",
+                    "desc": "Entrenament oficial per dominar l'ús de la tecnologia de l'oracle Chainlink, abastant conceptes de blockchain, Solidity, tokens ERC20, NFTs i automatització de Chainlink."
+                },
+                "3": {
+                    "title": "Big Data I",
+                    "desc": "Curs introductori sobre l'ús de Python per manipular grans conjunts de dades, incloent-hi estadístiques, processament i visualització de dades."
+                }
+            },
+            "counter": {
+                "0": "Anys d'experiència",
+                "1": "Funcionalitats desenvolupades",
+                "2": "Projectes a GitHub"
+            }
+        },
+        "code": {
+            "h1": [
+                "Exemples de projectes",
+                "de desenvolupament web3"
+            ],
+            "slider_list_tittle": "Principals usos",
+            "slider": [
+                {
+                    "id": 1,
+                    "h2": "Loteria",
+                    "desc": "Programa de sorteig de NFT de membresia, utilitzant una blockchain existent i la seva seguretat per gestionar el sorteig",
+                    "list": [
+                        "Accés a contingut exclusiu per als participants",
+                        "Seguretat en l'intercanvi i ús del NFT",
+                        "Avantatges associats als tokens ERC1155"
+                    ],
+                    "instructions": [
+                        "Connectar una cartera",
+                        "Obtenir tokens de prova SepoliaETH",
+                        "Indicar la quantitat de tokens desitjats",
+                        "Acceptar la compra amb la cartera",
+                        "Comprovar a final de mes si has estat premiat",
+                        "Podràs consultar-ho a Opensea o altres plataformes NFT",
+                        "O a la pàgina del sorteig, a la secció de guanyadors"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "h2": "NFT de membresia",
+                    "desc": "Programa de membresia amb NFT associat, utilitzant blockchain per gestionar la membresia",
+                    "list": [
+                        "Accés a contingut exclusiu per als propietaris",
+                        "Seguretat en l'intercanvi i ús del NFT",
+                        "Avantatges associats als tokens ERC1155"
+                    ],
+                    "instructions": [
+                        "Connectar una cartera",
+                        "Obtenir tokens de prova SepoliaETH",
+                        "Clicar al botó de comprar el NFT",
+                        "Acceptar la compra amb la cartera",
+                        "Comprovar a Opensea o altres plataformes NFT",
+                        "O a la pàgina on acabes de comprar el NFT",
+                        "Ara podràs accedir a la pàgina de membresia i al seu contingut exclusiu"
+                    ]
+                },
+                {
+                    "id": 3,
+                    "h2": "Safe Storage",
+                    "desc": "Programa d'emmagatzematge segur, utilitzant una blockchain existent i la seva immutabilitat per emmagatzemar dades",
+                    "list": [
+                        "Màxima seguretat en l'emmagatzematge de dades",
+                        "Accés a les dades a través de tecnologia web",
+                        "Avantatges associats a la seguretat blockchain"
+                    ],
+                    "instructions": [
+                        "Connectar una cartera",
+                        "Introduir un número per guardar",
+                        "Clicar al botó de guardar",
+                        "Acceptar la interacció amb el contracte",
+                        "Comprovar a la pàgina com s'ha modificat el número"
+                    ]
+                }
+            ],
+            "buttons": {
+                "example": "Exemple desplegat",
+                "code": [
+                    "Github",
+                    "Blockchain Codig"
+                ]
+            }
+        }
+    }
+}

@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { buttonVariants } from "../ui/button";
 import { cn } from "@/lib/utils";
 import { MobileNav } from "./mobile-nav";
@@ -7,6 +6,8 @@ import { CConectButton } from "../oth/custom-connect-button";
 import { DataSiteConfig } from "@/lib/types";
 import { userInCookiesUC } from "@/core/interface-adapters/controllers/user";
 import ThemePopover from "./theme-popover";
+import { Link as LinkLocale } from "@/i18n/routing";
+import Link from "next/link";
 
 
 
@@ -16,11 +17,11 @@ export async function SiteHeader({ dataSiteConfig }: { dataSiteConfig: DataSiteC
         <div className="container flex h-14 max-w-screen-2xl items-center">
             <nav className="flex items-center space-x-4 lg:space-x-6">
                 {/* Logo part */}
-                <Link href={dataSiteConfig.logo.path} className="flex items-center">
+                <LinkLocale href={dataSiteConfig.logo.path as any} className="flex items-center">
                     {dataSiteConfig.logo.render}
-                </Link>
+                </LinkLocale>
                 {/* Paginas part */}
-                <Link href={dataSiteConfig.paths[0].path} className={"text-sm font-medium transition-color hover:text-primary hidden md:inline-block"}>{dataSiteConfig.paths[0].title}</Link>
+                <LinkLocale href={dataSiteConfig.paths[0].path as any} className={"text-sm font-medium transition-color hover:text-primary hidden md:inline-block"}>{dataSiteConfig.paths[0].title}</LinkLocale>
                 {/* <Link href="/about" className={cn("text-sm font-medium transition-color hover:text-primary hidden sm:inline-block", pathname === "/about" ? "text-foreground" : "text-foreground/60")}>About</Link> */}
             </nav>
 
@@ -30,13 +31,20 @@ export async function SiteHeader({ dataSiteConfig }: { dataSiteConfig: DataSiteC
 
                     {
                         dataSiteConfig.icons.map(item => {
-                            return (
-                                <Link key={item.title} href={item.path} target={item.blank ? "_blank" : "_self"} rel="noreferrer">
+                            if(item.blank){
+                                <Link key={item.title} href={item.path} target="_blank" rel="noreferrer">
                                     <div className={cn(buttonVariants({ variant: "ghost" }), "w-10 px-0 hidden md:inline-flex")}>
                                         {item.render}
                                     </div>
                                 </Link>
-                            )
+                            }else{
+                            return (
+                                <LinkLocale key={item.title} href={{pathname:item.path as any}} rel="noreferrer">
+                                    <div className={cn(buttonVariants({ variant: "ghost" }), "w-10 px-0 hidden md:inline-flex")}>
+                                        {item.render}
+                                    </div>
+                                </LinkLocale>
+                            )}
                         })
                     }</nav>
                     <span className="flex items-center gap-2">

@@ -1,0 +1,6 @@
+
+{
+"i18n-ally.localesPaths": ["./content/data"],
+"i18n-ally.keystyle": "nested",
+"i18n-ally.pathMatcher": "{locale}/{namespace}.json"
+}

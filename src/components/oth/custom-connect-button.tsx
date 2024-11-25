@@ -123,7 +123,7 @@ export const CConectButton =  ({connectButtonLabel="Iniciar session"}:{connectBu
                 console.log("loggin in!")
                 const jwt = await login(params)
                 setImg(jwt.ctx.img)
-                rd("/academia")
+                rd("/")
             },
             getLoginPayload: async ({address}) => generatePayload({address}),
             doLogout:async () => {

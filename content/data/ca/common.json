@@ -1,0 +1,14 @@
+{
+    "common": {
+        "previous": "Anterior",
+        "next": "Següent"
+    },
+    "root": {
+        "h1": "Estàs a la pàgina arrel",
+        "links": {
+            "admin": "Anar a administració",
+            "academia": "Anar a academia",
+            "ceo": "Anar a sobre mi"
+        }
+    }
+}

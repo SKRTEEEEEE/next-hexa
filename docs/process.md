@@ -127,7 +127,6 @@ npm i react-countup
 - [x] Ejecutar el comando de migración y esperar que nada pete 🫠
 - [x] Solucionar el error de re-hidratación de next-themes: esta en [theme-provider switch component](../src/components/oth/theme-provider.tsx) probablemente 🧎‍♂️‍➡️💨
 - [x] Solucionar el error de re-hidratación de third-web 
-##### **ACTUALIDAD**
 
 
 ## 1x. Frontend
@@ -137,18 +136,23 @@ npm i react-countup
 
         Este ocurre cuando entramos directamente a **cualquier ruta**, excepto [la principal / root](http://localhost:3000)
 - [x] Mejorar el frontend, mejorando los temas, y comprobando la correcta utilización de tailwind en todos los componentes **p1**
-- [ ] Traducir todo a Español
+- [x] Traducir todo a Español
 - [ ] Unificar lógica del main(grid-layout)
     - [x] mínimo: Las partes que utilizan el `site-header` component
+##### **ACTUALIDAD**
 ### Oth
 #### Tech table
 - [x] Terminar parte mobile
 #### Tech dialog
 - [ ] Tratar de encontrar el causante del problema del id
 - [ ] Responder acciones del servidor con `toast()`
-### EXTRA(dep)
-- [ ] Tratar de automatizar mínimamente la gestión de las dos versiones, tanto de Nextjs como React - o a falta de, documentar proceso.  
-## 1x. Internalization (en/es/de) `i18n`
+#### EXTRA(dep)
+- [**NOT REALIZED**] Tratar de automatizar mínimamente la gestión de las dos versiones, tanto de Nextjs como React - o a falta de, documentar proceso.  
+### Internalization (en/es/de/ca) `i18n`
+- [ ] Pasar la parte de web3 a la i18n (asi eliminamos la parte de bdd que no tiene clean arch)
+- [ ] Hay que arreglar los links de academia y admin page-parts
+
+
 ## 1x. Reestructurar clean arch v3 p2 (back)
 ### Revisar connectors
 - [ ] Mirar que hacer con las **funciones de los connectors que se utilizan en el Framework**, como client de thirdweb o ourFileRouter de uploadthing que creo que ni se utiliza.

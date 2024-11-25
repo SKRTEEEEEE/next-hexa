@@ -1,8 +1,8 @@
 import { Calendar } from "lucide-react";
-import Link from "next/link";
 import { buttonVariants } from "../ui/button";
 import { cn, formatDate } from "@/lib/utils";
 import { Tag } from "./tag";
+import { Link } from "@/i18n/routing";
 
 interface PostItemProps {
     slug: string;
@@ -16,7 +16,7 @@ export function EjercicioItem({slug, title, description, date,tags}: PostItemPro
     return <article className="flex flex-col gap-2 border-border border-b py-3">
         <div>
             <h2 className="text-2xl font-bold">
-                <Link href={"/academia/"+slug}>{title}
+                <Link href={"/academia/"+slug as any}>{title}
                 </Link>
             </h2>
         </div>
@@ -34,7 +34,7 @@ export function EjercicioItem({slug, title, description, date,tags}: PostItemPro
                     <time dateTime={date}>{formatDate(date)}</time>
                 </dd>
             </dl>
-        <Link href={"/academia/"+slug} className={cn(buttonVariants({variant: "link"}),"py-0")}>
+        <Link href={"/academia/"+slug as any} className={cn(buttonVariants({variant: "link"}),"py-0")}>
             Read more ➡️
         </Link>
         </div>

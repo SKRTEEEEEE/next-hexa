@@ -4,14 +4,15 @@ import { useState } from "react";
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "../ui/sheet";
 import { Button } from "../ui/button";
 import { Menu } from "lucide-react";
-import Link, { LinkProps } from "next/link";
-import { useRouter } from "next/navigation";
 
 import { CConectButton } from "../oth/custom-connect-button";
 import { User } from "@/core/domain/entities/User";
 import UserFormDialog from "../site-header/user-form-dialog";
 import { DataSiteConfig } from "@/lib/types";
 import { Separator } from "../ui/separator";
+import { Link as LinkLocale, useRouter} from "@/i18n/routing";
+import Link, { LinkProps } from "next/link";
+import { useLocale } from "next-intl";
 
 export function MobileNav({ user, dataSiteConfig }: { user: User | false | null, dataSiteConfig: DataSiteConfig }) {
   const [open, setOpen] = useState(false);
@@ -25,11 +26,11 @@ export function MobileNav({ user, dataSiteConfig }: { user: User | false | null,
         </Button>
       </SheetTrigger>
       <SheetContent side="right">
-        <SheetTitle><Link className="font-bold flex items-center text-xl gap-4" onClick={()=>{
+        <SheetTitle><LinkLocale className="font-bold flex items-center text-xl gap-4" onClick={()=>{
           setOpen(false)
-        }} href={dataSiteConfig.logo.path}>
+        }} href={dataSiteConfig.logo.path as any}>
           {dataSiteConfig.logo.render}
-        </Link>
+        </LinkLocale>
         <Separator className="mt-2"/>
         </SheetTitle>
      
@@ -46,11 +47,18 @@ export function MobileNav({ user, dataSiteConfig }: { user: User | false | null,
 
           {
             dataSiteConfig.icons.map(icon => {
+             if(icon.blank){
               return(
-                <Link key={icon.id} target={icon.blank?"_blank":"_self"} rel="noreferrer" href={icon.path}>
+              <Link key={icon.id} onClick={()=>{setOpen(false)}} target="_blank" rel="noreferrer" href={icon.path}>
+              {icon.title}
+            </Link>)
+             }else{
+              return(
+                <LinkLocale key={icon.id} onClick={()=>{setOpen(false)}} rel="noreferrer" href={icon.path as any}>
                   {icon.title}
-                </Link>
+                </LinkLocale>
               )
+             }
             })
           }
   
@@ -73,20 +81,19 @@ function MobileLink({
   onOpenChange,
   children,
   className,
-  ...props
 }: MobileLinkProps) {
   const router = useRouter();
+
   return (
-    <Link
-      href={href}
+    <div
       onClick={() => {
-        router.push(href.toString());
+        router.push(href.toString() as any);
         onOpenChange?.(false);
       }}
       className={className}
-      {...props}
+      // {...props}
     >
       {children}
-    </Link>
+    </div>
   );
 }

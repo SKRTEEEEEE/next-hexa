@@ -34,12 +34,28 @@ type AdminTechTableProps = {
     }
     admins: any[];
   }
-const renderButtonNew = 
+const renderButtonNew  = 
 <Button className="gap-2">
 <Plus className="h-4 w-4" />
 Añadir nueva tecnología
 </Button>
+  const renderButtonEdit = (name:string) =>
+  <span>
+  <TooltipProvider>
+  <Tooltip>
 
+    <TooltipTrigger asChild>
+      <Button variant={"ghost"} size={"icon"}>
+        <Pencil className="h-4 w-4" />
+        <span className="sr-only">Delete {name}</span>
+      </Button>
+    </TooltipTrigger>
+    <TooltipContent className="bg-transparent border-none p-0">
+      <Button variant={"secondary"}>{ `Editar ${name}` }</Button>
+    </TooltipContent>
+  </Tooltip>
+  </TooltipProvider>
+  </span>
 export default function AdminTechTable({ lenguajes, isAdmin, dispo, admins }: AdminTechTableProps) {
   const {dispoLeng, dispoFw} = dispo
   const [page, setPage] = useState(1)
@@ -72,23 +88,7 @@ export default function AdminTechTable({ lenguajes, isAdmin, dispo, admins }: Ad
             {paginatedData.map((tech) => 
             {
               console.log("tech tech-table: ",tech)
-              const renderButtonEdit = 
-              <span>
-              <TooltipProvider>
-              <Tooltip>
-    
-                <TooltipTrigger asChild>
-                  <Button variant={"ghost"} size={"icon"}>
-                    <Pencil className="h-4 w-4" />
-                    <span className="sr-only">Delete {tech.name}</span>
-                  </Button>
-                </TooltipTrigger>
-                <TooltipContent className="bg-transparent border-none p-0">
-                  <Button variant={"secondary"}>{ `Editar ${tech.name}` }</Button>
-                </TooltipContent>
-              </Tooltip>
-              </TooltipProvider>
-              </span>
+            
    // <Button variant="ghost" size="icon" asChild>
               //   <div>
               //     <Pencil className="h-4 w-4" />
@@ -122,7 +122,7 @@ export default function AdminTechTable({ lenguajes, isAdmin, dispo, admins }: Ad
                 </TableCell>
                 <TableCell className="text-right">
                   <div className="flex justify-end space-x-2">
-                    <TechDialog dispoLeng={dispoLeng} dispoFw={dispoFw} renderButton={renderButtonEdit} tech={tech} admins={admins}/>
+                    <TechDialog dispoLeng={dispoLeng} dispoFw={dispoFw} renderButton={renderButtonEdit(tech.name)} tech={tech} admins={admins}/>
                     <DeleteTechButton isAdmin={isAdmin} name={tech.name} onError={(error) => setError(error)}/>
                   </div>
                 </TableCell>
@@ -155,12 +155,7 @@ export default function AdminTechTable({ lenguajes, isAdmin, dispo, admins }: Ad
                 </div>
               </CardTitle>
               <div className="flex space-x-2">
-                <Button variant="ghost" size="icon" asChild>
-                  <Link href={`/techs/${tech.name}`}>
-                    <Pencil className="h-4 w-4" />
-                    <span className="sr-only">Edit {tech.name}</span>
-                  </Link>
-                </Button>
+              <TechDialog dispoLeng={dispoLeng} dispoFw={dispoFw} renderButton={renderButtonEdit(tech.name)} tech={tech} admins={admins}/>
                 <DeleteTechButton isAdmin={isAdmin} name={tech.name} onError={(error) => setError(error)}/>
               </div>
             </CardHeader>

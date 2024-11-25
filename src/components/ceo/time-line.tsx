@@ -1,14 +1,16 @@
 import { dataStudiesPage } from "@/lib/data-ceo";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 
 const TimeLine = () => {
+    const t = useTranslations("ceo")
     return (
         <div className="flex flex-col justify-center divide-y divide-slate-200">
             <div className="w-full max-w-3xl mx-auto md:pb-40 md:pt-20">
                 <div className="-my-6">
                     {dataStudiesPage.map((data) => (
                         <div key={data.id} className="relative py-6 pl-8 sm:pl-32 group">
-                            <h3 className="mb-1 text-2xl font-bold sm:mb-0" tabIndex={0}>{data.title}</h3>
+                            <h3 className="mb-1 text-2xl font-bold sm:mb-0" tabIndex={0}>{t(`estudios.list.${data.id}.title`)}</h3>
                             <div className="flex flex-col sm:flex-row items-start mb-1 
                                         group-last:before:hidden before:absolute 
                                         before:left-2 sm:before:left-0 before:h-full
@@ -22,7 +24,7 @@ const TimeLine = () => {
                                 <time className="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-primary-ceo-200 bg-secondary-ceo-700 rounded-full" tabIndex={0}>{data.date}</time>
                                 <Link href={data.link} className="text-xl font-bold text-gray-400">{data.institution}</Link>
                             </div>
-                            <div className="text-slate-400 w-5/6">{data.description}</div>
+                            <div className="text-slate-400 w-5/6">{t(`estudios.list.${data.id}.desc`)}</div>
                         </div>
                     ))}
                 </div>

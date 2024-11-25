@@ -1,6 +1,6 @@
 "use client"
 
-import { useRef} from 'react';
+import { JSX, useRef} from 'react';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -12,13 +12,13 @@ import styles from './autoplay-slider-techs.module.css';
 
 // import required modules
 import  { Autoplay, Pagination, Navigation } from 'swiper/modules';
-import { TechLenguajeItem } from '@/lib/types';
+import { Tech } from '@/lib/projects';
 
 
 type AutoplaySliderProps = {
     delay?: number;
     disableOnInteraction?: boolean;
-    data: TechLenguajeItem[];
+    data: (Tech&{icon:JSX.Element})[];
   }
 
 
